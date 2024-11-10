@@ -39,6 +39,7 @@ public class Main {
         int sum = calculateSalary(employees);
         int averageSum = sum / employees.length;
         return averageSum;
+
     }
 
     public static void displayFio() {
