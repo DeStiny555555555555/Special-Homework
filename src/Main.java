@@ -15,29 +15,35 @@ public class Main {
         return result;
     }
 
-    private static int calculateMinSalary(Employee[] employees1) {
+    private static int calculateMinSalary(Employee[] employees) {
         int minSalary = Integer.MAX_VALUE;
         for (int i = 0; i < employees.length; i++) {
             if (employees[i].getSalary() < minSalary) {
-                minSalary = employees[i].getSalary();
+                if (employees[i] != null)
+                    minSalary = employees[i].getSalary();
             }
         }
         return minSalary;
     }
 
-    private static int calculateMaxSalary(Employee[] employees2) {
+    private static int calculateMaxSalary(Employee[] employees) {
         int maxSalary = Integer.MIN_VALUE;
         for (int i = 0; i < employees.length; i++) {
-            if (employees[i].getSalary() > maxSalary) {
-                maxSalary = employees[i].getSalary();
-            }
+            if (employees[i] != null)
+                if (employees[i].getSalary() > maxSalary) {
+                    maxSalary = employees[i].getSalary();
+                }
         }
         return maxSalary;
     }
 
-    private static int calculateAverageSalary(Employee[] employees3) {
+    private static int calculateAverageSalary(Employee[] employees) {
         int sum = calculateSalary(employees);
         int averageSum = sum / employees.length;
+        for (int i = 0; i < employees.length; i++) {
+            if (employees[i] != null) {
+            }
+        }
         return averageSum;
 
     }
